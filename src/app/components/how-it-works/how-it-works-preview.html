@@ -1,0 +1,21 @@
+<section class="how-it-works-preview">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">A simple process with a powerful impact</p>
+    </div>
+    <div class="steps">
+      <div class="step" *ngFor="let step of displayedSteps">
+        <div class="step-number">{{ step.number }}</div>
+        <div class="step-icon-wrapper">
+          <i [class]="'fas ' + step.icon + ' step-icon'"></i>
+        </div>
+        <h3 class="step-title">{{ step.title }}</h3>
+        <p class="step-description">{{ step.description }}</p>
+      </div>
+    </div>
+    <div class="steps-cta">
+      <a routerLink="/how-it-works" class="btn btn-primary">See Full Process</a>
+    </div>
+  </div>
+</section>

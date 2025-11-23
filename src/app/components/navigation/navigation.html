@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-brand">
+      <div class="logo">
+        <svg viewBox="0 0 100 50" class="logo-svg">
+          <path d="M 20 25 Q 20 10, 35 10 Q 50 10, 50 25 Q 50 40, 35 40 Q 20 40, 20 25" 
+                fill="none" stroke="#FF6B35" stroke-width="3" class="spoon-path"/>
+          <path d="M 50 25 Q 50 10, 65 10 Q 80 10, 80 25 Q 80 40, 65 40 Q 50 40, 50 25" 
+                fill="none" stroke="#2D5016" stroke-width="3" class="fork-path"/>
+        </svg>
+      </div>
+      <a routerLink="/" class="brand-name">Save'nServe</a>
+    </div>
+    <ul class="nav-menu" [class.active]="isMenuOpen">
+      <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/about" (click)="closeMenu()">About</a></li>
+      <li><a routerLink="/how-it-works" (click)="closeMenu()">How It Works</a></li>
+      <li><a routerLink="/impact" (click)="closeMenu()">Impact</a></li>
+      <li><a routerLink="/testimonials" (click)="closeMenu()">Testimonials</a></li>
+      <li><a routerLink="/partners" (click)="closeMenu()">Partners</a></li>
+      <li><a routerLink="/contact" (click)="closeMenu()">Contact</a></li>
+    </ul>
+    <div class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>

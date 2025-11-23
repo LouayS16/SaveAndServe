@@ -1,0 +1,20 @@
+<section class="partners-preview">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Our Partners</h2>
+      <p class="section-subtitle">Working together to make a difference</p>
+    </div>
+    <div class="partners-grid">
+      <div class="partner-card" *ngFor="let partner of displayedPartners">
+        <div class="partner-logo">
+          <i [class]="'fas ' + partner.logo"></i>
+        </div>
+        <h4 class="partner-name">{{ partner.name }}</h4>
+        <span class="partner-category">{{ partner.category }}</span>
+      </div>
+    </div>
+    <div class="partners-cta">
+      <a routerLink="/partners" class="btn btn-primary">Show More Partners</a>
+    </div>
+  </div>
+</section>

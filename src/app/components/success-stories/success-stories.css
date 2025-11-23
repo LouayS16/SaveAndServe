@@ -1,0 +1,63 @@
+/* Success Stories Component Styles */
+
+.story-card {
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+.story-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.story-image:not(.loaded) {
+    background: linear-gradient(90deg, 
+        rgba(255, 107, 53, 0.1) 0%, 
+        rgba(45, 80, 22, 0.1) 50%, 
+        rgba(255, 107, 53, 0.1) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Stagger animation for story cards */
+.story-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.story-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.story-card:nth-child(3) {
+    animation-delay: 0.5s;
+}

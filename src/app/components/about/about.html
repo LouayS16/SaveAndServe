@@ -1,0 +1,52 @@
+<section class="about">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">About Save'nServe</h2>
+      <p class="section-subtitle">Bridging the gap between food waste and hunger</p>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>Save'nServe is a foundation dedicated to reducing food waste while fighting hunger in Tunisia. We partner with restaurants, hotels, and food establishments to rescue surplus food that would otherwise go to waste.</p>
+        <p>Our mission is simple: collect quality, unused food and distribute it to families and individuals in need across Tunisia's most vulnerable communities.</p>
+        <p>Every day, we work tirelessly to ensure that no good food goes to waste while no one goes hungry. Through our network of dedicated volunteers and partners, we create a sustainable cycle of giving that benefits both the environment and those in need.</p>
+        <div class="stats">
+          <div class="stat-item" *ngFor="let stat of stats">
+            <div class="stat-number">{{ stat.current | number }}</div>
+            <div class="stat-label">{{ stat.label }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-image">
+        <div class="image-placeholder">
+          <div class="logo-circle">
+            <img src="/logo.jpg" alt="Save'nServe Logo" class="logo-image" />
+            <div class="logo-glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Photo Gallery Section -->
+    <div class="photo-gallery">
+      <h3 class="gallery-title">Our Impact in Action</h3>
+      <p class="gallery-subtitle">See how we're making a difference in communities across Tunisia</p>
+      <div class="gallery-grid">
+        <div class="gallery-item" *ngFor="let image of galleryImages; let i = index" [style.animation-delay]="(i * 0.1) + 's'">
+          <div class="gallery-image">
+            <img 
+              [src]="image.src" 
+              [alt]="image.title"
+              class="gallery-img"
+              loading="lazy"
+              (load)="onImageLoad($event)"
+            />
+            <div class="image-overlay-gallery">
+              <h4 class="image-title">{{ image.title }}</h4>
+            </div>
+          </div>
+          <p class="photo-caption">{{ image.caption }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

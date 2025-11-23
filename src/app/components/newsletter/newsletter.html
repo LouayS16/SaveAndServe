@@ -1,0 +1,17 @@
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter-content">
+      <h3>Stay Updated</h3>
+      <p>Subscribe to our newsletter to receive updates on our impact and ways to get involved</p>
+      <form class="newsletter-form" (ngSubmit)="subscribeNewsletter()">
+        <input 
+          type="email" 
+          [(ngModel)]="newsletterEmail" 
+          name="newsletterEmail"
+          placeholder="Enter your email" 
+          required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>

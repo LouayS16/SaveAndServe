@@ -1,0 +1,17 @@
+<section class="impact">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Our Impact</h2>
+      <p class="section-subtitle">Making a difference, one meal at a time</p>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-card" *ngFor="let impact of impacts">
+        <div class="impact-icon">
+          <i [class]="'fas ' + impact.icon"></i>
+        </div>
+        <h3>{{ impact.title }}</h3>
+        <p>{{ impact.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

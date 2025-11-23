@@ -1,0 +1,32 @@
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">What People Say</h2>
+      <p class="section-subtitle">Real stories from our community</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card" *ngFor="let testimonial of testimonials; let i = index" [style.animation-delay]="(i * 0.15) + 's'">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar-wrapper">
+            <img 
+              [src]="testimonial.image" 
+              [alt]="testimonial.name"
+              class="testimonial-avatar"
+              loading="lazy"
+              (load)="onImageLoad($event)"
+            />
+            <div class="avatar-border"></div>
+          </div>
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">{{ testimonial.name }}</h4>
+            <p class="testimonial-role">{{ testimonial.role }}</p>
+          </div>
+        </div>
+        <div class="testimonial-rating">
+          <span *ngFor="let star of [1,2,3,4,5]" class="star">⭐</span>
+        </div>
+        <p class="testimonial-quote">"{{ testimonial.quote }}"</p>
+      </div>
+    </div>
+  </div>
+</section>
